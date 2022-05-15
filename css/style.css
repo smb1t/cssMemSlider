@@ -74,6 +74,11 @@ header {
   text-align: center;
 }
 
+h1 {
+  margin-bottom: 0.625rem;
+  font-size: 3rem;
+}
+
 /* 
   Container 
 */
@@ -89,9 +94,8 @@ header,
 
 .slider__inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
+
 
 /* 
   Images 
@@ -103,6 +107,7 @@ header,
 
 .slider__images > li {
   opacity: 0;
+  visibility: hidden;
 }
 
 .slider__images > li:nth-child(1) {
@@ -127,10 +132,15 @@ header,
   padding: 1rem 1rem 1rem 0;
 }
 
+.slider__captions p {
+  line-height: 1.5;
+}
+
 .slider__captions li {
   width: 100%;
   flex: 1 0 auto;
   opacity: 0;
+  visibility: hidden;
 }
 
 .slider__captions > li:nth-child(1) {}
@@ -186,30 +196,36 @@ label span {
 #slide-1:checked ~ .slider__images > :nth-child(1),
 #slide-1:checked ~ .slider__inner > .slider__captions li:nth-child(1) {
   opacity: 1;
+  visibility: visible;
 }
 #slide-2:checked ~ .slider__images > :nth-child(2),
 #slide-2:checked ~ .slider__inner > .slider__captions li:nth-child(2) {
   opacity: 1;
+  visibility: visible;
 }
 
 #slide-3:checked ~ .slider__images > :nth-child(3),
 #slide-3:checked ~ .slider__inner > .slider__captions li:nth-child(3) {
   opacity: 1;
+  visibility: visible;
 }
 
 #slide-4:checked ~ .slider__images > :nth-child(4),
 #slide-4:checked ~ .slider__inner > .slider__captions li:nth-child(4) {
   opacity: 1;
+  visibility: visible;
 }
 
 #slide-5:checked ~ .slider__images > :nth-child(5),
 #slide-5:checked ~ .slider__inner > .slider__captions li:nth-child(5) {
   opacity: 1;
+  visibility: visible;
 }
 
 #slide-6:checked ~ .slider__images > :nth-child(6),
 #slide-6:checked ~ .slider__inner > .slider__captions li:nth-child(6) {
   opacity: 1;
+  visibility: visible;
 }
 
 /* navigation */
@@ -242,3 +258,62 @@ label span {
   0% {}
   100% {}
 }
+
+/* 
+  Media queriess
+*/
+
+
+@media (min-width: 40rem) {
+  .slider__inner {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 40rem) and (max-width: 59.9375rem) {
+  header {
+    padding-bottom: 1.5rem;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 39.9375rem) {
+  :root {
+    --container-width: 40rem;
+    --container-gap: .625rem;
+  }
+
+  header {
+    /* padding-top: 1rem; */
+    padding-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .slider__inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .slider__captions {
+    padding-right: 0;
+  }
+
+  .slider__navigation {
+    padding-top: 1rem;
+    justify-content: center;
+  }
+
+  a {
+    color: var(--color--link);
+  }
+}
+
+@media (min-width: 60rem) {}
