@@ -6,7 +6,7 @@
 
 :root {
   /* Sizes */
-    --container-width: 40rem;
+    --container-width: 60rem;
     --container-gap: 2rem;
     --navigation__gap: .3125rem; /* 10px */
     --button--size: 2rem;
@@ -97,7 +97,25 @@ header,
   Images 
 */
 
-.slider__images {}
+.slider__images {
+  display: flex;
+}
+
+.slider__images > li {
+  opacity: 0;
+}
+
+.slider__images > li:nth-child(1) {
+  margin-left: 0;
+}
+
+.slider__images > li:nth-child(2),
+.slider__images > li:nth-child(3),
+.slider__images > li:nth-child(4),
+.slider__images > li:nth-child(5),
+.slider__images > li:nth-child(6) {
+  margin-left: -100%;  
+}
 
 /* 
   Captions 
@@ -105,12 +123,24 @@ header,
 
 .slider__captions {
   display: flex;
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
   padding: 1rem 1rem 1rem 0;
 }
 
 .slider__captions li {
-  /* opacity: 0; */
+  width: 100%;
+  flex: 1 0 auto;
+  opacity: 0;
+}
+
+.slider__captions > li:nth-child(1) {}
+
+.slider__captions > li:nth-child(2),
+.slider__captions > li:nth-child(3),
+.slider__captions > li:nth-child(4),
+.slider__captions > li:nth-child(5),
+.slider__captions > li:nth-child(6) {
+  margin-left: -100%;  
 }
 
 /* 
@@ -150,6 +180,40 @@ label span {
   Actions 
 */
 
+/* images, captions */
+
+
+#slide-1:checked ~ .slider__images > :nth-child(1),
+#slide-1:checked ~ .slider__inner > .slider__captions li:nth-child(1) {
+  opacity: 1;
+}
+#slide-2:checked ~ .slider__images > :nth-child(2),
+#slide-2:checked ~ .slider__inner > .slider__captions li:nth-child(2) {
+  opacity: 1;
+}
+
+#slide-3:checked ~ .slider__images > :nth-child(3),
+#slide-3:checked ~ .slider__inner > .slider__captions li:nth-child(3) {
+  opacity: 1;
+}
+
+#slide-4:checked ~ .slider__images > :nth-child(4),
+#slide-4:checked ~ .slider__inner > .slider__captions li:nth-child(4) {
+  opacity: 1;
+}
+
+#slide-5:checked ~ .slider__images > :nth-child(5),
+#slide-5:checked ~ .slider__inner > .slider__captions li:nth-child(5) {
+  opacity: 1;
+}
+
+#slide-6:checked ~ .slider__images > :nth-child(6),
+#slide-6:checked ~ .slider__inner > .slider__captions li:nth-child(6) {
+  opacity: 1;
+}
+
+/* navigation */
+
 #slide-1:checked ~ .slider__inner li:nth-child(1) span {
   background-color: var(--color--2);
 }
@@ -168,6 +232,7 @@ label span {
 #slide-6:checked ~ .slider__inner li:nth-child(6) span {
   background-color: var(--color--2);
 }
+
 
 /* 
   Animations 
