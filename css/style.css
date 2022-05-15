@@ -1,5 +1,20 @@
-:root {
+/* 
+  1200px => 75rem
+  960px => 60rem
+  640px => 40rem
+*/
 
+:root {
+  /* Sizes */
+    --container-width: 40rem;
+    --container-gap: 2rem;
+    --navigation__gap: .3125rem; /* 10px */
+    --button--size: 2rem;
+
+  /* Colora */
+  --color--1: teal;
+  --color--2: darkorange;
+  --color--link: var(--color--2);
 }
 
 * {
@@ -10,17 +25,41 @@ body,
 ul,
 figure,
 figcaption,
-picture {
+picture,
+p,
+h1,
+h3 {
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Bubblegum Sans', cursive;
+  color: var(--color--1);
+}
+
+picture {
+  display: block;
+  font-size: 0; /* fix fantom bottom margin */
+}
+
 img {
   margin: 0;
+  width: 100%;
 }
 
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;  
+  transition: color .3s;
+}
+
+a:hover {
+  color: var(--color--link);
 }
 
 [type="radio"] {
@@ -28,4 +67,113 @@ ul {
   width: 0;
   height: 0;
   margin: 0;
+}
+
+header {
+  padding: 2rem var(--container-gap);
+  text-align: center;
+}
+
+/* 
+  Container 
+*/
+header,
+.slider {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.slider {
+  padding: 0 var(--container-gap);
+}
+
+.slider__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 
+  Images 
+*/
+
+.slider__images {}
+
+/* 
+  Captions 
+*/
+
+.slider__captions {
+  display: flex;
+  flex: 1 0 auto;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.slider__captions li {
+  /* opacity: 0; */
+}
+
+/* 
+  Navigation 
+*/
+
+.slider__navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.slider__navigation li {
+}
+
+.slider__navigation li:not(:last-child) {
+  margin-right: var(--navigation__gap);
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--button--size);
+  cursor: pointer;
+}
+
+label span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 .3125rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* 
+  Actions 
+*/
+
+#slide-1:checked ~ .slider__inner li:nth-child(1) span {
+  background-color: var(--color--2);
+}
+#slide-2:checked ~ .slider__inner li:nth-child(2) span {
+  background-color: var(--color--2);
+}
+#slide-3:checked ~ .slider__inner li:nth-child(3) span {
+  background-color: var(--color--2);
+}
+#slide-4:checked ~ .slider__inner li:nth-child(4) span {
+  background-color: var(--color--2);
+}
+#slide-5:checked ~ .slider__inner li:nth-child(5) span {
+  background-color: var(--color--2);
+}
+#slide-6:checked ~ .slider__inner li:nth-child(6) span {
+  background-color: var(--color--2);
+}
+
+/* 
+  Animations 
+*/
+
+@keyframes animationName {
+  0% {}
+  100% {}
 }

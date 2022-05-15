@@ -5,8 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Mem Slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <header>
+      <h1>CSS Mem Slider</h1>
+      <h3>RSSchool task</h3>
+    </header>
+    <main class="slider">
+      <input id="slide-1" type="radio" name="slides" checked/>
+      <input id="slide-2" type="radio" name="slides"/>
+      <input id="slide-3" type="radio" name="slides"/>
+      <input id="slide-4" type="radio" name="slides"/>
+      <input id="slide-5" type="radio" name="slides"/>
+      <input id="slide-6" type="radio" name="slides"/>
+      <ul class="slider__images">
+        <li>
+          <picture>
+            <img src="images/eric-han-Hd7vwFzZpH0-unsplash-960.jpg" alt="Photo by Eric Han on Unsplash"/>
+          </picture>
+        </li>
+      </ul>
+      <div class="slider__inner">
+        <ul class="slider__captions">
+          <li><p>Photo by <a href="https://unsplash.com/@madeyes" target="_blank">Eric Han</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p></li>
+        </ul>
+        <ul class="slider__navigation">
+          <li>
+            <label for="slide-1"><span></span></label>
+          </li>
+          <li>
+            <label for="slide-2"><span></span></label>
+          </li>
+          <li>
+            <label for="slide-3"><span></span></label>
+          </li>
+          <li>
+            <label for="slide-4"><span></span></label>
+          </li>
+          <li>
+            <label for="slide-5"><span></span></label>
+          </li>
+          <li>
+            <label for="slide-6"><span></span></label>
+          </li>
+          
+        </ul>
+      </div>
+    </main>
   </body>
 </html>
