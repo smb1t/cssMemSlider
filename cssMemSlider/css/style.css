@@ -65,22 +65,6 @@ ul {
   list-style-type: none;
 }
 
-a {
-  display: inline-block;
-  padding: 0 .25rem;
-  margin: 0 .0625rem;
-  border: 0 dotted transparent;
-  border-width: 0.0625rem;
-  text-decoration: none;
-  color: currentColor;  
-  transition: all .2s ease-out;
-  border-color: currentColor;
-}
-
-a:hover {
-  color: var(--color--6);
-}
-
 [type="radio"] {
   display: flex;
   width: 0;
@@ -222,6 +206,22 @@ picture {
 
 }
 
+.slider__captions  a {
+  display: inline-block;
+  padding: 0 .25rem;
+  margin: 0 .0625rem;
+  border: 0 dotted transparent;
+  border-width: 0.0625rem;
+  text-decoration: none;
+  color: currentColor;  
+  transition: all .2s ease-out;
+  border-color: currentColor;
+}
+
+.slider__captions  a:hover {
+  color: var(--color--6);
+}
+
 .slider__captions p {
   display: inline-block;
   font-family: 'Turret Road', cursive;
@@ -322,7 +322,7 @@ label:active span {
   align-items: flex-end;
 }
 
-.slider__bottombar span {
+.slider__bottombar a {
   margin: 0 .625rem .4375rem 0;
   text-shadow: 0 0.125rem 0 var(--color--7), 
                0 -0.125rem 0 var(--color--7), 
@@ -331,6 +331,10 @@ label:active span {
                0 0 0.125rem var(--color--7), 
                0 0.25rem 0 var(--color--7);
   color: var(--color--5);
+}
+
+.slider__bottombar a:hover {
+  color: var(--color--6);
 }
 
 /* 
