@@ -108,6 +108,7 @@ header,
 .slider__images > li {
   opacity: 0;
   visibility: hidden;
+  /* animation: flash .5s; */
 }
 
 .slider__images > li:nth-child(1) {
@@ -192,40 +193,45 @@ label span {
 
 /* images, captions */
 
-
 #slide-1:checked ~ .slider__images > :nth-child(1),
 #slide-1:checked ~ .slider__inner > .slider__captions li:nth-child(1) {
   opacity: 1;
   visibility: visible;
+  animation: flash .5s;
 }
 #slide-2:checked ~ .slider__images > :nth-child(2),
 #slide-2:checked ~ .slider__inner > .slider__captions li:nth-child(2) {
   opacity: 1;
   visibility: visible;
+  animation: flash .5s;
 }
 
 #slide-3:checked ~ .slider__images > :nth-child(3),
 #slide-3:checked ~ .slider__inner > .slider__captions li:nth-child(3) {
   opacity: 1;
   visibility: visible;
+  animation: flash .5s;
 }
 
 #slide-4:checked ~ .slider__images > :nth-child(4),
 #slide-4:checked ~ .slider__inner > .slider__captions li:nth-child(4) {
   opacity: 1;
   visibility: visible;
+  animation: flash .5s;
 }
 
 #slide-5:checked ~ .slider__images > :nth-child(5),
 #slide-5:checked ~ .slider__inner > .slider__captions li:nth-child(5) {
   opacity: 1;
   visibility: visible;
+  animation: flash .5s;
 }
 
 #slide-6:checked ~ .slider__images > :nth-child(6),
 #slide-6:checked ~ .slider__inner > .slider__captions li:nth-child(6) {
   opacity: 1;
   visibility: visible;
+  animation: flash .5s;
 }
 
 /* navigation */
@@ -254,15 +260,28 @@ label span {
   Animations 
 */
 
-@keyframes animationName {
-  0% {}
-  100% {}
+@keyframes flash {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* 
   Media queriess
 */
-
 
 @media (min-width: 40rem) {
   .slider__inner {
