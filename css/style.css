@@ -1,4 +1,6 @@
 /* 
+  CSS Mem slider
+
   1200px => 75rem
   960px => 60rem
   640px => 40rem
@@ -68,7 +70,6 @@ a {
   padding: 0 .25rem;
   margin: 0 .0625rem;
   border: 0 dotted transparent;
-  /* border-width: 0.0625rem 0.0625rem 0.125rem 0.0625rem; */
   border-width: 0.0625rem;
   text-decoration: none;
   color: currentColor;  
@@ -78,7 +79,6 @@ a {
 
 a:hover {
   color: var(--color--6);
-  /* border-color: var(--color--3); */
 }
 
 [type="radio"] {
@@ -94,6 +94,8 @@ header {
 }
 
 h1 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
   font-size: 3rem;
   letter-spacing: .1875rem;
   color: var(--color--5);
@@ -103,14 +105,11 @@ h1 {
                 -0.125rem 0 0 var(--color--7),
                 0 0 0.125rem var(--color--7),
                 0 0.25rem 0 var(--color--7);
-
-    display: inline-block;
-    background: var(--color--1);
-    padding: 0.5rem 1rem;
-    border: 0 solid var(--color--7);
-    border-radius: 0.625rem;
-    box-shadow: 0 2px 0 3px var(--color--7);
-    border-top-width: 0.0625rem;
+  background: var(--color--1);
+  border: 0 solid var(--color--7);
+  border-top-width: 0.0625rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 0 3px var(--color--7);
 }
 
 /* 
@@ -127,6 +126,10 @@ main {
   padding: 0 var(--container-gap);
 }
 
+.flex-container {
+  display: flex;
+}
+
 .slider {
   padding: .75rem 2rem 1rem;
   background: var(--color--5);
@@ -136,7 +139,6 @@ main {
 }
 
 .slider__topbar {
-  display: flex;
   padding-bottom: 0.25rem;
 }
 
@@ -163,21 +165,14 @@ main {
    flex: 1 1 auto;
 }
 
-.slider__inner {
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-
 /* 
   Images 
 */
 
 .slider__images {
-  display: flex;
   margin-bottom: 1rem;
   padding: 0 0 .1875rem;
-  background: var(--color--1);
+  background: var(--color--3);
   border: 0.125rem solid var(--color--7);
   border-radius: .625rem;
   box-shadow: var(--shadow--main);
@@ -217,30 +212,17 @@ picture {
 */
 
 .slider__captions {
-  display: flex;
+  margin: 0;
+  padding: .5rem 1rem;
+  background: var(--color--7);
+  border: .0625rem solid var(--color--7);
+  border-radius: 10px;
+  box-shadow: inset 0 -.0625rem 0 0 var(--color--5);
 
-  /* display: inline-block; */
-    margin: 0;
-    padding: .5rem 1rem;
-    background: var(--color--7);
-    border: .0625rem solid var(--color--7);
-    border-radius: 10px;
-    box-shadow: inset 0 -.0625rem 0 0 var(--color--5);
-  /* flex: 1 0 auto; */
-  /* padding: 1rem 1rem 1rem 0; */
 }
-/* .slider__captions {
-  padding: 0;
-} */
+
 .slider__captions p {
   display: inline-block;
-  /* margin: 0; */
-  /* padding: .5rem 1rem; */
-  /* background: var(--color--3); */
-  /* border: .0625rem solid var(--color--7); */
-  /* border-radius: 7px; */
-  /* box-shadow: inset 0 -.0625rem 0 .0625rem var(--color--7); */
-  /* font-family: 'Codystar', cursive; */
   font-family: 'Turret Road', cursive;
   color: var(--color--3)
 }
@@ -254,8 +236,6 @@ picture {
   visibility: hidden;
 }
 
-.slider__captions > li:nth-child(1) {}
-
 .slider__captions > li:nth-child(2),
 .slider__captions > li:nth-child(3),
 .slider__captions > li:nth-child(4),
@@ -268,12 +248,12 @@ picture {
   Navigation 
 */
 
-.slider__navigation {
-  display: flex;
-  flex-direction: row;
+.slider__controls {
+  margin-bottom: 1rem;
 }
 
-.slider__navigation li {
+.slider__navigation {
+  flex-direction: row;
 }
 
 .slider__navigation li:not(:last-child) {
@@ -310,7 +290,6 @@ label:hover span {
 */
 
 .slider__bottombar {
-  display: flex;
   justify-content: space-between;
   padding: 2rem 0 1rem;
   border: 0 solid var(--color--7);
@@ -321,12 +300,28 @@ label:hover span {
   width: 45%;
   height: 3rem;
   background: linear-gradient(45deg, rgba(38,38,38,0) 46%,rgb(68,68,68) 46% 54%,rgba(38,38,38,0) 54%),
-      linear-gradient(-45deg, rgba(38,38,38,0) 46%,rgb(68,68,68) 46% 54%,rgba(38,38,38,0) 54%);
+              linear-gradient(-45deg, rgba(38,38,38,0) 46%,rgb(68,68,68) 46% 54%,rgba(38,38,38,0) 54%);
   background-size: .75rem .75rem;
   background-color: var(--color--7);
   border-radius: 10px;
   border: .125rem solid var(--color--7);
   box-shadow: var(--shadow--main);
+}
+
+.slider__bottombar > :last-child {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.slider__bottombar span {
+  margin: 0 10px 7px 0;
+  text-shadow: 0 0.125rem 0 var(--color--7), 
+               0 -0.125rem 0 var(--color--7), 
+               0.125rem 0 0 var(--color--7), 
+               -0.125rem 0 0 var(--color--7), 
+               0 0 0.125rem var(--color--7), 
+               0 0.25rem 0 var(--color--7);
+  color: var(--color--5);
 }
 
 /* 
@@ -336,41 +331,41 @@ label:hover span {
 /* images, captions */
 
 #slide-1:checked ~ .slider__images > :nth-child(1),
-#slide-1:checked ~ .slider__inner > .slider__captions li:nth-child(1) {
+#slide-1:checked ~ .slider__controls > .slider__captions li:nth-child(1) {
   opacity: 1;
   visibility: visible;
   animation: flash .5s;
 }
 #slide-2:checked ~ .slider__images > :nth-child(2),
-#slide-2:checked ~ .slider__inner > .slider__captions li:nth-child(2) {
+#slide-2:checked ~ .slider__controls > .slider__captions li:nth-child(2) {
   opacity: 1;
   visibility: visible;
   animation: flash .5s;
 }
 
 #slide-3:checked ~ .slider__images > :nth-child(3),
-#slide-3:checked ~ .slider__inner > .slider__captions li:nth-child(3) {
+#slide-3:checked ~ .slider__controls > .slider__captions li:nth-child(3) {
   opacity: 1;
   visibility: visible;
   animation: flash .5s;
 }
 
 #slide-4:checked ~ .slider__images > :nth-child(4),
-#slide-4:checked ~ .slider__inner > .slider__captions li:nth-child(4) {
+#slide-4:checked ~ .slider__controls > .slider__captions li:nth-child(4) {
   opacity: 1;
   visibility: visible;
   animation: flash .5s;
 }
 
 #slide-5:checked ~ .slider__images > :nth-child(5),
-#slide-5:checked ~ .slider__inner > .slider__captions li:nth-child(5) {
+#slide-5:checked ~ .slider__controls > .slider__captions li:nth-child(5) {
   opacity: 1;
   visibility: visible;
   animation: flash .5s;
 }
 
 #slide-6:checked ~ .slider__images > :nth-child(6),
-#slide-6:checked ~ .slider__inner > .slider__captions li:nth-child(6) {
+#slide-6:checked ~ .slider__controls > .slider__captions li:nth-child(6) {
   opacity: 1;
   visibility: visible;
   animation: flash .5s;
@@ -378,12 +373,12 @@ label:hover span {
 
 /* navigation */
 
-#slide-1:checked ~ .slider__inner .slider__navigation li:nth-child(1) span,
-#slide-2:checked ~ .slider__inner .slider__navigation li:nth-child(2) span,
-#slide-3:checked ~ .slider__inner .slider__navigation li:nth-child(3) span,
-#slide-4:checked ~ .slider__inner .slider__navigation li:nth-child(4) span,
-#slide-5:checked ~ .slider__inner .slider__navigation li:nth-child(5) span,
-#slide-6:checked ~ .slider__inner .slider__navigation li:nth-child(6) span {
+#slide-1:checked ~ .slider__controls .slider__navigation li:nth-child(1) span,
+#slide-2:checked ~ .slider__controls .slider__navigation li:nth-child(2) span,
+#slide-3:checked ~ .slider__controls .slider__navigation li:nth-child(3) span,
+#slide-4:checked ~ .slider__controls .slider__navigation li:nth-child(4) span,
+#slide-5:checked ~ .slider__controls .slider__navigation li:nth-child(5) span,
+#slide-6:checked ~ .slider__controls .slider__navigation li:nth-child(6) span {
   width: 1.25rem;
   height: 1.25rem;
   background-color: var(--color--1);
@@ -391,12 +386,12 @@ label:hover span {
   box-shadow: 0 1px 1px 3px var(--color--7);
 }
 
-#slide-1:checked ~ .slider__inner .slider__navigation li:nth-child(1):hover label,
-#slide-2:checked ~ .slider__inner .slider__navigation li:nth-child(2):hover label,
-#slide-3:checked ~ .slider__inner .slider__navigation li:nth-child(3):hover label,
-#slide-4:checked ~ .slider__inner .slider__navigation li:nth-child(4):hover label,
-#slide-5:checked ~ .slider__inner .slider__navigation li:nth-child(5):hover label,
-#slide-6:checked ~ .slider__inner .slider__navigation li:nth-child(6):hover label {
+#slide-1:checked ~ .slider__controls .slider__navigation li:nth-child(1):hover label,
+#slide-2:checked ~ .slider__controls .slider__navigation li:nth-child(2):hover label,
+#slide-3:checked ~ .slider__controls .slider__navigation li:nth-child(3):hover label,
+#slide-4:checked ~ .slider__controls .slider__navigation li:nth-child(4):hover label,
+#slide-5:checked ~ .slider__controls .slider__navigation li:nth-child(5):hover label,
+#slide-6:checked ~ .slider__controls .slider__navigation li:nth-child(6):hover label {
     cursor: default;
 }
 
@@ -428,7 +423,7 @@ label:hover span {
 */
 
 @media (min-width: 40rem) {
-  .slider__inner {
+  .slider__controls {
     justify-content: space-between;
     align-items: center;
   }
@@ -451,7 +446,6 @@ label:hover span {
   }
 
   h1 {
-    margin-bottom: 0.5rem;
     font-size: 2.5rem;
   }
 }
@@ -463,7 +457,6 @@ label:hover span {
   }
 
   header {
-    /* padding-top: 1rem; */
     padding-bottom: 1rem;
   }
 
@@ -476,7 +469,7 @@ label:hover span {
     padding-right: 1.5rem;
   }
 
-  .slider__inner {
+  .slider__controls {
     flex-direction: column-reverse;
     text-align: center;
   }
@@ -499,11 +492,13 @@ label:hover span {
     padding-top: 1.5rem;
   }
 
-  .slider__bottombar div:first-child {
+  .slider__bottombar div:last-child {
     width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
-  .slider__bottombar div:last-child {
+  .slider__bottombar div:first-child {
     width: 0;
     height: 0;
     opacity: 0;
@@ -511,5 +506,3 @@ label:hover span {
     border-width: 0;
   }
 }
-
-@media (min-width: 60rem) {}

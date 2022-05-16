@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Mem Slider</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Turret+Road&display=swap" rel="stylesheet">
@@ -16,7 +20,7 @@
     </header>
     <main>
       <div class="slider">
-        <div class="slider__topbar">
+        <div class="slider__topbar flex-container">
           <hr>
           <span>Rolling Scopes School</span>
           <hr>
@@ -27,7 +31,7 @@
         <input id="slide-4" type="radio" name="slides"/>
         <input id="slide-5" type="radio" name="slides"/>
         <input id="slide-6" type="radio" name="slides"/>
-        <ul class="slider__images">
+        <ul class="slider__images flex-container">
           <li>
             <picture>
               <img src="images/eric-han-Hd7vwFzZpH0-unsplash-960.jpg" alt="Photo by Eric Han on Unsplash"/>
@@ -60,17 +64,16 @@
           </li>
           
         </ul>
-        <div class="slider__inner">
-          <ul class="slider__captions">
+        <div class="slider__controls flex-container">
+          <ul class="slider__captions flex-container">
             <li><p><span>Photo by<a href="https://unsplash.com/@madeyes" target="_blank">Eric Han</a>on<a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
             <li><p><span>Photo by <a href="https://unsplash.com/@jacalynbeales" target="_blank">Jacalyn Beales</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
             <li><p><span>Photo by <a href="https://unsplash.com/@kimdonkey" target="_blank">Manki Kim</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
             <li><p><span>Photo by <a href="https://unsplash.com/@kerber" target="_blank">Marko Blažević</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
             <li><p><span>Photo by <a href="https://unsplash.com/@tranmautritam" target="_blank">Tran Mau Tri Tam</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
             <li><p><span>Photo by <a href="https://unsplash.com/@yangshuo" target="_blank">Yang Shuo</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
-
           </ul>
-          <ul class="slider__navigation">
+          <ul class="slider__navigation flex-container">
             <li>
               <label for="slide-1"><span></span></label>
             </li>
@@ -91,9 +94,9 @@
             </li>            
           </ul>
         </div>
-        <div class="slider__bottombar">
+        <div class="slider__bottombar flex-container">
           <div></div>
-          <div></div>
+          <div class="flex-container"><span>Created by @smb1t#7627</span></div>
         </div>
       </div>
     </main>
