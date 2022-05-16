@@ -7,85 +7,94 @@
     <title>CSS Mem Slider</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Turret+Road&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <h1>CSS Mem Slider</h1>
-      <h3>RSSchool task</h3>
+      <h1>CSS Mem Slider.</h1>
     </header>
-    <main class="slider">
-      <input id="slide-1" type="radio" name="slides" checked/>
-      <input id="slide-2" type="radio" name="slides"/>
-      <input id="slide-3" type="radio" name="slides"/>
-      <input id="slide-4" type="radio" name="slides"/>
-      <input id="slide-5" type="radio" name="slides"/>
-      <input id="slide-6" type="radio" name="slides"/>
-      <ul class="slider__images">
-        <li>
-          <picture>
-            <img src="images/eric-han-Hd7vwFzZpH0-unsplash-960.jpg" alt="Photo by Eric Han on Unsplash"/>
-          </picture>
-        </li>
-        <li>
-          <picture>
-            <img src="images/jacalyn-beales-CKsDMYPDgCs-unsplash-960.jpg" alt="Photo by Jacalyn Beales on Unsplash"/>
-          </picture>
-        </li>
-        <li>
-          <picture>
-            <img src="images/manki-kim-2Nca6Aum17o-unsplash-960.jpg" alt="Photo by Manki Kim on Unsplash"/>
-          </picture>
-        </li>
-        <li>
-          <picture>
-            <img src="images/marko-blazevic-zBvVuRJ71vU-unsplash-960.jpg" alt="Photo by Marko Blažević on Unsplash"/>
-          </picture>
-        </li>
-        <li>
-          <picture>
-            <img src="images/tran-mau-tri-tam--81lVsfM4gQ-unsplash-960.jpg"  alt="Photo by Tran Mau Tri Tam on Unsplash"/>
-          </picture>
-        </li>
-        <li>
-          <picture>
-            <img src="images/yang-shuo-G4A14c4leT4-unsplash-960.jpg"  alt="Photo by Yang Shuo on Unsplash"/>
-          </picture>
-        </li>
-        
-      </ul>
-      <div class="slider__inner">
-        <ul class="slider__captions">
-          <li><p>Photo by <a href="https://unsplash.com/@madeyes" target="_blank">Eric Han</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p></li>
-          <li><p>Photo by <a href="https://unsplash.com/@jacalynbeales" target="_blank">Jacalyn Beales</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p></li>
-          <li><p>Photo by <a href="https://unsplash.com/@kimdonkey" target="_blank">Manki Kim</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p></li>
-          <li><p>Photo by <a href="https://unsplash.com/@kerber" target="_blank">Marko Blažević</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p></li>
-          <li><p>Photo by <a href="https://unsplash.com/@tranmautritam" target="_blank">Tran Mau Tri Tam</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p></li>
-          <li><p>Photo by <a href="https://unsplash.com/@yangshuo" target="_blank">Yang Shuo</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</p></li>
-
-        </ul>
-        <ul class="slider__navigation">
+    <main>
+      <div class="slider">
+        <div class="slider__topbar">
+          <hr>
+          <span>Rolling Scopes School</span>
+          <hr>
+        </div>
+        <input id="slide-1" type="radio" name="slides" checked/>
+        <input id="slide-2" type="radio" name="slides"/>
+        <input id="slide-3" type="radio" name="slides"/>
+        <input id="slide-4" type="radio" name="slides"/>
+        <input id="slide-5" type="radio" name="slides"/>
+        <input id="slide-6" type="radio" name="slides"/>
+        <ul class="slider__images">
           <li>
-            <label for="slide-1"><span></span></label>
+            <picture>
+              <img src="images/eric-han-Hd7vwFzZpH0-unsplash-960.jpg" alt="Photo by Eric Han on Unsplash"/>
+            </picture>
           </li>
           <li>
-            <label for="slide-2"><span></span></label>
+            <picture>
+              <img src="images/jacalyn-beales-CKsDMYPDgCs-unsplash-960.jpg" alt="Photo by Jacalyn Beales on Unsplash"/>
+            </picture>
           </li>
           <li>
-            <label for="slide-3"><span></span></label>
+            <picture>
+              <img src="images/manki-kim-2Nca6Aum17o-unsplash-960.jpg" alt="Photo by Manki Kim on Unsplash"/>
+            </picture>
           </li>
           <li>
-            <label for="slide-4"><span></span></label>
+            <picture>
+              <img src="images/marko-blazevic-zBvVuRJ71vU-unsplash-960.jpg" alt="Photo by Marko Blažević on Unsplash"/>
+            </picture>
           </li>
           <li>
-            <label for="slide-5"><span></span></label>
+            <picture>
+              <img src="images/tran-mau-tri-tam--81lVsfM4gQ-unsplash-960.jpg"  alt="Photo by Tran Mau Tri Tam on Unsplash"/>
+            </picture>
           </li>
           <li>
-            <label for="slide-6"><span></span></label>
+            <picture>
+              <img src="images/yang-shuo-G4A14c4leT4-unsplash-960.jpg"  alt="Photo by Yang Shuo on Unsplash"/>
+            </picture>
           </li>
           
         </ul>
+        <div class="slider__inner">
+          <ul class="slider__captions">
+            <li><p><span>Photo by<a href="https://unsplash.com/@madeyes" target="_blank">Eric Han</a>on<a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
+            <li><p><span>Photo by <a href="https://unsplash.com/@jacalynbeales" target="_blank">Jacalyn Beales</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
+            <li><p><span>Photo by <a href="https://unsplash.com/@kimdonkey" target="_blank">Manki Kim</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
+            <li><p><span>Photo by <a href="https://unsplash.com/@kerber" target="_blank">Marko Blažević</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
+            <li><p><span>Photo by <a href="https://unsplash.com/@tranmautritam" target="_blank">Tran Mau Tri Tam</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
+            <li><p><span>Photo by <a href="https://unsplash.com/@yangshuo" target="_blank">Yang Shuo</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</span></p></li>
+
+          </ul>
+          <ul class="slider__navigation">
+            <li>
+              <label for="slide-1"><span></span></label>
+            </li>
+            <li>
+              <label for="slide-2"><span></span></label>
+            </li>
+            <li>
+              <label for="slide-3"><span></span></label>
+            </li>
+            <li>
+              <label for="slide-4"><span></span></label>
+            </li>
+            <li>
+              <label for="slide-5"><span></span></label>
+            </li>
+            <li>
+              <label for="slide-6"><span></span></label>
+            </li>            
+          </ul>
+        </div>
+        <div class="slider__bottombar">
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </main>
   </body>
