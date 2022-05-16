@@ -286,6 +286,14 @@ label:hover span {
   height: 1.0rem;
 }
 
+label:active span {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--color--6);
+  border-color: var(--color--6);
+  box-shadow: 0 .0625rem .0625rem .1875rem var(--color--7);
+}
+
 /* 
   Bottom bar
 */
