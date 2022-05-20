@@ -59,6 +59,7 @@ picture {
 img {
   margin: 0;
   width: 100%;
+  filter: grayscale(1);
 }
 
 ul {
@@ -70,6 +71,13 @@ ul {
   width: 0;
   height: 0;
   margin: 0;
+
+}
+
+@-moz-document url-prefix() {
+  [type="radio"] {
+    margin-top: -.25rem; /* Firefox fix */
+  }
 }
 
 header {
@@ -190,10 +198,6 @@ main {
 .slider__images > li:nth-child(5),
 .slider__images > li:nth-child(6) {
   margin-left: -100%;  
-}
-
-img {
-  filter: grayscale(1);
 }
 
 picture {
